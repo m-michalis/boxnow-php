@@ -18,7 +18,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/m-michalis/boxnow-api.git"
+      "url": "https://github.com/m-michalis/boxnow-php.git"
     }
   ],
   "require": {

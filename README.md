@@ -11,23 +11,11 @@ PHP 5.5 and later
 ## Installation & Usage
 ### Composer
 
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](http://getcomposer.org/):
 
+```bash
+composer require m-michalis/boxnow-api
 ```
-{
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/m-michalis/boxnow-php.git"
-    }
-  ],
-  "require": {
-    "m-michalis/boxnow-api": "*@dev"
-  }
-}
-```
-
-Then run `composer install`
 
 ### Manual Installation
 

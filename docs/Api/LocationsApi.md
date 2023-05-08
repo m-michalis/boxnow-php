@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**apiV1OriginsGet**](LocationsApi.md#apiv1originsget) | **GET** /api/v1/origins | List available origins to pickup the order from
 
 # **apiV1DestinationsGet**
-> \Swagger\Client\Boxnow\InlineResponse2001 apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name)
+> \Swagger\Client\Boxnow\InlineResponse2001 apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag)
 
 List available destinations to deliver the order to
 
@@ -32,9 +32,10 @@ $radius = 25000; // float | Radius in meters to return only locations within sel
 $required_size = 1.2; // float | Return only locations that can accept a package of your `requiredSize`
 $location_type = array(new \Swagger\Client\Boxnow\LocationType()); // \Swagger\Client\Boxnow\LocationType[] | Return only locations with given types. If not present, filter is not applied.
 $name = "name_example"; // string | Return only locations with matching name
+$region_language_tag = new \Swagger\Client\Boxnow\LanguageTag(); // \Swagger\Client\Boxnow\LanguageTag | 
 
 try {
-    $result = $apiInstance->apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name);
+    $result = $apiInstance->apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationsApi->apiV1DestinationsGet: ', $e->getMessage(), PHP_EOL;
@@ -51,6 +52,7 @@ Name | Type | Description  | Notes
  **required_size** | **float**| Return only locations that can accept a package of your &#x60;requiredSize&#x60; | [optional]
  **location_type** | [**\Swagger\Client\Boxnow\LocationType[]**](../Model/\Swagger\Client\Boxnow\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional]
  **name** | **string**| Return only locations with matching name | [optional]
+ **region_language_tag** | [**\Swagger\Client\Boxnow\LanguageTag**](../Model/.md)|  | [optional]
 
 ### Return type
 
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV1OriginsGet**
-> \Swagger\Client\Boxnow\InlineResponse2002 apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name)
+> \Swagger\Client\Boxnow\InlineResponse2002 apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag)
 
 List available origins to pickup the order from
 
@@ -92,9 +94,10 @@ $radius = 25000; // float | Radius in meters to return only locations within sel
 $required_size = 1.2; // float | Return only locations that can accept a package of your `requiredSize`
 $location_type = array(new \Swagger\Client\Boxnow\LocationType()); // \Swagger\Client\Boxnow\LocationType[] | Return only locations with given types. If not present, filter is not applied.
 $name = "name_example"; // string | Return only locations with matching name
+$region_language_tag = new \Swagger\Client\Boxnow\LanguageTag(); // \Swagger\Client\Boxnow\LanguageTag | 
 
 try {
-    $result = $apiInstance->apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name);
+    $result = $apiInstance->apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LocationsApi->apiV1OriginsGet: ', $e->getMessage(), PHP_EOL;
@@ -111,6 +114,7 @@ Name | Type | Description  | Notes
  **required_size** | **float**| Return only locations that can accept a package of your &#x60;requiredSize&#x60; | [optional]
  **location_type** | [**\Swagger\Client\Boxnow\LocationType[]**](../Model/\Swagger\Client\Boxnow\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional]
  **name** | **string**| Return only locations with matching name | [optional]
+ **region_language_tag** | [**\Swagger\Client\Boxnow\LanguageTag**](../Model/.md)|  | [optional]
 
 ### Return type
 

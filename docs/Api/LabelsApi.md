@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1DeliveryRequestsOrderNumberLabelGet**](LabelsApi.md#apiv1deliveryrequestsordernumberlabelget) | **GET** /api/v1/delivery-requests/{orderNumber}/label | Get shipping label data of parcels order
 [**apiV1DeliveryRequestsOrderNumberLabelTypeGet**](LabelsApi.md#apiv1deliveryrequestsordernumberlabeltypeget) | **GET** /api/v1/delivery-requests/{orderNumber}/label.{type} | Get printable labels for all parcels in a delivery request.
+[**apiV1LabelssearchPost**](LabelsApi.md#apiv1labelssearchpost) | **POST** /api/v1/labels:search | Find labels as PDF
 [**apiV1ParcelsIdLabelGet**](LabelsApi.md#apiv1parcelsidlabelget) | **GET** /api/v1/parcels/{id}/label | Get shipping label data of parcel
 [**apiV1ParcelsIdLabelTypeGet**](LabelsApi.md#apiv1parcelsidlabeltypeget) | **GET** /api/v1/parcels/{id}/label.{type} | Get printable label for parcel.
 [**uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet**](LabelsApi.md#uiv1deliveryrequestsorderimportsnumberlabelpdfget) | **GET** /ui/v1/delivery-requests/{orderImportsNumber}/label.pdf | Get printable labels for all parcels in a delivery request.
@@ -118,6 +119,52 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/pdf, application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **apiV1LabelssearchPost**
+> apiV1LabelssearchPost($body)
+
+Find labels as PDF
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\BoxnowAPI\LabelsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Swagger\Client\Boxnow\V1LabelssearchBody(); // \Swagger\Client\Boxnow\V1LabelssearchBody | 
+
+try {
+    $apiInstance->apiV1LabelssearchPost($body);
+} catch (Exception $e) {
+    echo 'Exception when calling LabelsApi->apiV1LabelssearchPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Boxnow\V1LabelssearchBody**](../Model/V1LabelssearchBody.md)|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/pdf, application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

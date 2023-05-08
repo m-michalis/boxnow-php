@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **amount_to_be_collected** | [**\Swagger\Client\Boxnow\AmountToBeCollected**](AmountToBeCollected.md) |  | 
 **allow_return** | [**\Swagger\Client\Boxnow\AllowReturn**](AllowReturn.md) |  | [optional] 
 **notify_on_accepted** | **string** | If set, we send a notification to this email when we accepted the order to our system. | [optional] 
-**notify_sms_on_accepted** | **string** | Phone number in international format. If set, we send a sms notification to this phone number. | [optional] 
+**notify_smson_accepted** | **string** | Phone number in international format. If set, we send a sms notification to this phone number. | [optional] 
 **return_location** | [**AnyOfDeliveryRequestReturnLocation**](AnyOfDeliveryRequestReturnLocation.md) |  | [optional] 
 **origin** | [**AllOfDeliveryRequestOrigin**](AllOfDeliveryRequestOrigin.md) |  | 
 **destination** | [**AllOfDeliveryRequestDestination**](AllOfDeliveryRequestDestination.md) |  | 

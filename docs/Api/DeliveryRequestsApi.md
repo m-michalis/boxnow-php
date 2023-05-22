@@ -1,4 +1,4 @@
-# OpenAPI\Client\DeliveryRequestsApi
+# Boxnow\DeliveryRequestsApi
 
 All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DeliveryRequestsOrderNumberPut()`
 
 ```php
-apiV1DeliveryRequestsOrderNumberPut($order_number, $api_v1_delivery_requests_order_number_put_request): \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberPut200Response
+apiV1DeliveryRequestsOrderNumberPut($order_number, $api_v1_delivery_requests_order_number_put_request): \Boxnow\API\ApiV1DeliveryRequestsOrderNumberPut200Response
 ```
 
 Update a created delivery request
@@ -30,17 +30,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $order_number = 'order_number_example'; // string | Unique order number in Your system. The same you use to create the delivery request.
-$api_v1_delivery_requests_order_number_put_request = new \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberPutRequest(); // \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberPutRequest
+$api_v1_delivery_requests_order_number_put_request = new \Boxnow\API\ApiV1DeliveryRequestsOrderNumberPutRequest(); // \Boxnow\API\ApiV1DeliveryRequestsOrderNumberPutRequest
 
 try {
     $result = $apiInstance->apiV1DeliveryRequestsOrderNumberPut($order_number, $api_v1_delivery_requests_order_number_put_request);
@@ -55,11 +55,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **order_number** | **string**| Unique order number in Your system. The same you use to create the delivery request. | |
-| **api_v1_delivery_requests_order_number_put_request** | [**\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberPutRequest**](../Model/ApiV1DeliveryRequestsOrderNumberPutRequest.md)|  | [optional] |
+| **api_v1_delivery_requests_order_number_put_request** | [**\Boxnow\API\ApiV1DeliveryRequestsOrderNumberPutRequest**](../Model/ApiV1DeliveryRequestsOrderNumberPutRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberPut200Response**](../Model/ApiV1DeliveryRequestsOrderNumberPut200Response.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsOrderNumberPut200Response**](../Model/ApiV1DeliveryRequestsOrderNumberPut200Response.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `apiV1DeliveryRequestsPost()`
 
 ```php
-apiV1DeliveryRequestsPost($delivery_request): \OpenAPI\Client\Model\ApiV1DeliveryRequestsPost200Response
+apiV1DeliveryRequestsPost($delivery_request): \Boxnow\API\ApiV1DeliveryRequestsPost200Response
 ```
 
 Create a delivery request for your order
@@ -90,16 +90,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$delivery_request = new \OpenAPI\Client\Model\DeliveryRequest(); // \OpenAPI\Client\Model\DeliveryRequest
+$delivery_request = new \Boxnow\API\DeliveryRequest(); // \Boxnow\API\DeliveryRequest
 
 try {
     $result = $apiInstance->apiV1DeliveryRequestsPost($delivery_request);
@@ -113,11 +113,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **delivery_request** | [**\OpenAPI\Client\Model\DeliveryRequest**](../Model/DeliveryRequest.md)|  | [optional] |
+| **delivery_request** | [**\Boxnow\API\DeliveryRequest**](../Model/DeliveryRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsPost200Response**](../Model/ApiV1DeliveryRequestsPost200Response.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsPost200Response**](../Model/ApiV1DeliveryRequestsPost200Response.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ try {
 ## `apiV1DeliveryRequestscheckAddressDeliveryPost()`
 
 ```php
-apiV1DeliveryRequestscheckAddressDeliveryPost($api_v1_delivery_requests_check_address_delivery_post_request): \OpenAPI\Client\Model\ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response
+apiV1DeliveryRequestscheckAddressDeliveryPost($api_v1_delivery_requests_check_address_delivery_post_request): \Boxnow\API\ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response
 ```
 
 Check delivery for address is available
@@ -150,16 +150,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$api_v1_delivery_requests_check_address_delivery_post_request = new \OpenAPI\Client\Model\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest(); // \OpenAPI\Client\Model\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest
+$api_v1_delivery_requests_check_address_delivery_post_request = new \Boxnow\API\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest(); // \Boxnow\API\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest
 
 try {
     $result = $apiInstance->apiV1DeliveryRequestscheckAddressDeliveryPost($api_v1_delivery_requests_check_address_delivery_post_request);
@@ -173,11 +173,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_delivery_requests_check_address_delivery_post_request** | [**\OpenAPI\Client\Model\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest**](../Model/ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest.md)|  | [optional] |
+| **api_v1_delivery_requests_check_address_delivery_post_request** | [**\Boxnow\API\ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest**](../Model/ApiV1DeliveryRequestsCheckAddressDeliveryPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response**](../Model/ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response**](../Model/ApiV1DeliveryRequestsCheckAddressDeliveryPost200Response.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ try {
 ## `apiV1DeliveryRequestscustomerReturnsPost()`
 
 ```php
-apiV1DeliveryRequestscustomerReturnsPost($api_v1_delivery_requests_customer_returns_post_request): \OpenAPI\Client\Model\ApiV1DeliveryRequestsCustomerReturnsPost200Response
+apiV1DeliveryRequestscustomerReturnsPost($api_v1_delivery_requests_customer_returns_post_request): \Boxnow\API\ApiV1DeliveryRequestsCustomerReturnsPost200Response
 ```
 
 Create a request delivery of parcel that customer would like to return
@@ -208,12 +208,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_delivery_requests_customer_returns_post_request = new \OpenAPI\Client\Model\ApiV1DeliveryRequestsCustomerReturnsPostRequest(); // \OpenAPI\Client\Model\ApiV1DeliveryRequestsCustomerReturnsPostRequest
+$api_v1_delivery_requests_customer_returns_post_request = new \Boxnow\API\ApiV1DeliveryRequestsCustomerReturnsPostRequest(); // \Boxnow\API\ApiV1DeliveryRequestsCustomerReturnsPostRequest
 
 try {
     $result = $apiInstance->apiV1DeliveryRequestscustomerReturnsPost($api_v1_delivery_requests_customer_returns_post_request);
@@ -227,11 +227,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_delivery_requests_customer_returns_post_request** | [**\OpenAPI\Client\Model\ApiV1DeliveryRequestsCustomerReturnsPostRequest**](../Model/ApiV1DeliveryRequestsCustomerReturnsPostRequest.md)|  | [optional] |
+| **api_v1_delivery_requests_customer_returns_post_request** | [**\Boxnow\API\ApiV1DeliveryRequestsCustomerReturnsPostRequest**](../Model/ApiV1DeliveryRequestsCustomerReturnsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsCustomerReturnsPost200Response**](../Model/ApiV1DeliveryRequestsCustomerReturnsPost200Response.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsCustomerReturnsPost200Response**](../Model/ApiV1DeliveryRequestsCustomerReturnsPost200Response.md)
 
 ### Authorization
 
@@ -249,7 +249,7 @@ No authorization required
 ## `apiV1DeliveryRequestsfromCsvPost()`
 
 ```php
-apiV1DeliveryRequestsfromCsvPost($type, $file): \OpenAPI\Client\Model\ApiV1DeliveryRequestsFromCsvPost200ResponseInner[]
+apiV1DeliveryRequestsfromCsvPost($type, $file): \Boxnow\API\ApiV1DeliveryRequestsFromCsvPost200ResponseInner[]
 ```
 
 Create delivery requests
@@ -264,7 +264,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -289,7 +289,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsFromCsvPost200ResponseInner[]**](../Model/ApiV1DeliveryRequestsFromCsvPost200ResponseInner.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsFromCsvPost200ResponseInner[]**](../Model/ApiV1DeliveryRequestsFromCsvPost200ResponseInner.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ No authorization required
 ## `apiV1SimpleDeliveryRequestsPost()`
 
 ```php
-apiV1SimpleDeliveryRequestsPost($api_v1_simple_delivery_requests_post_request): \OpenAPI\Client\Model\ApiV1SimpleDeliveryRequestsPost200Response
+apiV1SimpleDeliveryRequestsPost($api_v1_simple_delivery_requests_post_request): \Boxnow\API\ApiV1SimpleDeliveryRequestsPost200Response
 ```
 
 Create delivery request for order with minimal data
@@ -320,12 +320,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryRequestsApi(
+$apiInstance = new Boxnow\Api\DeliveryRequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_simple_delivery_requests_post_request = new \OpenAPI\Client\Model\ApiV1SimpleDeliveryRequestsPostRequest(); // \OpenAPI\Client\Model\ApiV1SimpleDeliveryRequestsPostRequest
+$api_v1_simple_delivery_requests_post_request = new \Boxnow\API\ApiV1SimpleDeliveryRequestsPostRequest(); // \Boxnow\API\ApiV1SimpleDeliveryRequestsPostRequest
 
 try {
     $result = $apiInstance->apiV1SimpleDeliveryRequestsPost($api_v1_simple_delivery_requests_post_request);
@@ -339,11 +339,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_simple_delivery_requests_post_request** | [**\OpenAPI\Client\Model\ApiV1SimpleDeliveryRequestsPostRequest**](../Model/ApiV1SimpleDeliveryRequestsPostRequest.md)|  | [optional] |
+| **api_v1_simple_delivery_requests_post_request** | [**\Boxnow\API\ApiV1SimpleDeliveryRequestsPostRequest**](../Model/ApiV1SimpleDeliveryRequestsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1SimpleDeliveryRequestsPost200Response**](../Model/ApiV1SimpleDeliveryRequestsPost200Response.md)
+[**\Boxnow\API\ApiV1SimpleDeliveryRequestsPost200Response**](../Model/ApiV1SimpleDeliveryRequestsPost200Response.md)
 
 ### Authorization
 

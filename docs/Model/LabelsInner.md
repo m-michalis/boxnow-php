@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\OpenAPI\Client\Model\LabelType**](LabelType.md) |  |
+**type** | [**\Boxnow\API\LabelType**](LabelType.md) |  |
 **mimetype** | **string** |  |
 **url** | **string** |  |
 

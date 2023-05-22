@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Boxnow
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client\Test\Api;
+namespace Boxnow\Test\Api;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \Boxnow\Configuration;
+use \Boxnow\ApiException;
+use \Boxnow\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ParcelsApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Boxnow
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

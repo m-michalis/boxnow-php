@@ -1,4 +1,4 @@
-# OpenAPI\Client\AuthenticationApi
+# Boxnow\AuthenticationApi
 
 All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1AuthSessionsPost()`
 
 ```php
-apiV1AuthSessionsPost($api_v1_auth_sessions_post_request): \OpenAPI\Client\Model\ApiV1AuthSessionsPost200Response
+apiV1AuthSessionsPost($api_v1_auth_sessions_post_request): \Boxnow\API\ApiV1AuthSessionsPost200Response
 ```
 
 Obtain authentication tokens
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthenticationApi(
+$apiInstance = new Boxnow\Api\AuthenticationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_auth_sessions_post_request = new \OpenAPI\Client\Model\ApiV1AuthSessionsPostRequest(); // \OpenAPI\Client\Model\ApiV1AuthSessionsPostRequest
+$api_v1_auth_sessions_post_request = new \Boxnow\API\ApiV1AuthSessionsPostRequest(); // \Boxnow\API\ApiV1AuthSessionsPostRequest
 
 try {
     $result = $apiInstance->apiV1AuthSessionsPost($api_v1_auth_sessions_post_request);
@@ -42,11 +42,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_auth_sessions_post_request** | [**\OpenAPI\Client\Model\ApiV1AuthSessionsPostRequest**](../Model/ApiV1AuthSessionsPostRequest.md)|  | [optional] |
+| **api_v1_auth_sessions_post_request** | [**\Boxnow\API\ApiV1AuthSessionsPostRequest**](../Model/ApiV1AuthSessionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1AuthSessionsPost200Response**](../Model/ApiV1AuthSessionsPost200Response.md)
+[**\Boxnow\API\ApiV1AuthSessionsPost200Response**](../Model/ApiV1AuthSessionsPost200Response.md)
 
 ### Authorization
 

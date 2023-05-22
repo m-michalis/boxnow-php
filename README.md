@@ -183,11 +183,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/m-michalis/boxnow-api.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "m-michalis/boxnow-api": "*@dev"
   }
 }
 ```
@@ -214,12 +214,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthenticationApi(
+$apiInstance = new Boxnow\Api\AuthenticationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_auth_sessions_post_request = new \OpenAPI\Client\Model\ApiV1AuthSessionsPostRequest(); // \OpenAPI\Client\Model\ApiV1AuthSessionsPostRequest
+$api_v1_auth_sessions_post_request = new \Boxnow\API\ApiV1AuthSessionsPostRequest(); // \Boxnow\API\ApiV1AuthSessionsPostRequest
 
 try {
     $result = $apiInstance->apiV1AuthSessionsPost($api_v1_auth_sessions_post_request);

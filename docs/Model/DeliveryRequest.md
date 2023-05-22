@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**overwrite_sender_shipping_label_info** | [**\OpenAPI\Client\Model\DeliveryRequestOverwriteSenderShippingLabelInfo**](DeliveryRequestOverwriteSenderShippingLabelInfo.md) |  | [optional]
+**overwrite_sender_shipping_label_info** | [**\Boxnow\API\DeliveryRequestOverwriteSenderShippingLabelInfo**](DeliveryRequestOverwriteSenderShippingLabelInfo.md) |  | [optional]
 **type_of_service** | **string** | Type of delivery service. You may not be eligible to use all types of service, contact support for further information. | [optional] [default to 'same-day']
 **description** | **string** | This is the description of the order. | [optional]
 **order_number** | **string** | Unique order reference number in Your system |
 **invoice_value** | **string** | Total value of the order. Must only contain numbers with no more than one decimal point and exactly 2 decimal places. |
-**payment_mode** | [**\OpenAPI\Client\Model\PaymentMode**](PaymentMode.md) |  |
+**payment_mode** | [**\Boxnow\API\PaymentMode**](PaymentMode.md) |  |
 **amount_to_be_collected** | **string** | COD amount for COD payment mode. Must only contain numbers with no more than one decimal point and exactly 2 decimal places. |
 **allow_return** | **bool** | If true, client will be able to return the goods the same way he received it. | [optional] [default to false]
 **notify_on_accepted** | **string** | If set, we send a notification to this email when we accepted the order to our system. | [optional]
 **notify_smson_accepted** | **string** | Phone number in international format. If set, we send a sms notification to this phone number. | [optional]
-**return_location** | [**\OpenAPI\Client\Model\DeliveryRequestReturnLocation**](DeliveryRequestReturnLocation.md) |  | [optional]
-**origin** | [**\OpenAPI\Client\Model\DeliveryRequestOrigin**](DeliveryRequestOrigin.md) |  |
-**destination** | [**\OpenAPI\Client\Model\DeliveryRequestDestination**](DeliveryRequestDestination.md) |  |
-**items** | [**\OpenAPI\Client\Model\DeliveryRequestItemsInner[]**](DeliveryRequestItemsInner.md) | List of parcels you want to send via BoxNow. |
+**return_location** | [**\Boxnow\API\DeliveryRequestReturnLocation**](DeliveryRequestReturnLocation.md) |  | [optional]
+**origin** | [**\Boxnow\API\DeliveryRequestOrigin**](DeliveryRequestOrigin.md) |  |
+**destination** | [**\Boxnow\API\DeliveryRequestDestination**](DeliveryRequestDestination.md) |  |
+**items** | [**\Boxnow\API\DeliveryRequestItemsInner[]**](DeliveryRequestItemsInner.md) | List of parcels you want to send via BoxNow. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

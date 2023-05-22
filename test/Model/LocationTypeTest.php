@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Boxnow
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace Boxnow\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Location type  - &#x60;apm&#x60; - specific APM on the given address  - &#x60;any-apm&#x60; - special location representing any APM, not a particual address  - &#x60;depot&#x60; - our transshipment yard  - &#x60;warehouse&#x60; - your warehouse where we pickup/return deliveries
- * @package     OpenAPI\Client
+ * @package     Boxnow
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique location ID |
-**type** | [**\OpenAPI\Client\Model\LocationType**](LocationType.md) |  |
+**type** | [**\Boxnow\API\LocationType**](LocationType.md) |  |
 **image** | **string** | Location image | [optional]
 **lat** | **string** |  | [optional]
 **lng** | **string** |  | [optional]

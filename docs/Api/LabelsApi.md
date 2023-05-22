@@ -1,4 +1,4 @@
-# OpenAPI\Client\LabelsApi
+# Boxnow\LabelsApi
 
 All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DeliveryRequestsOrderNumberLabelGet()`
 
 ```php
-apiV1DeliveryRequestsOrderNumberLabelGet($order_number): \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response
+apiV1DeliveryRequestsOrderNumberLabelGet($order_number): \Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response
 ```
 
 Get shipping label data of parcels order
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response**](../Model/ApiV1DeliveryRequestsOrderNumberLabelGet200Response.md)
+[**\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response**](../Model/ApiV1DeliveryRequestsOrderNumberLabelGet200Response.md)
 
 ### Authorization
 
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -152,12 +152,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_labels_search_post_request = new \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest(); // \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest
+$api_v1_labels_search_post_request = new \Boxnow\API\ApiV1LabelsSearchPostRequest(); // \Boxnow\API\ApiV1LabelsSearchPostRequest
 
 try {
     $result = $apiInstance->apiV1LabelssearchPost($api_v1_labels_search_post_request);
@@ -171,7 +171,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_labels_search_post_request** | [**\OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest**](../Model/ApiV1LabelsSearchPostRequest.md)|  | [optional] |
+| **api_v1_labels_search_post_request** | [**\Boxnow\API\ApiV1LabelsSearchPostRequest**](../Model/ApiV1LabelsSearchPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -193,7 +193,7 @@ No authorization required
 ## `apiV1ParcelsIdLabelGet()`
 
 ```php
-apiV1ParcelsIdLabelGet($id): \OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response
+apiV1ParcelsIdLabelGet($id): \Boxnow\API\ApiV1ParcelsIdLabelGet200Response
 ```
 
 Get shipping label data of parcel
@@ -206,10 +206,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response**](../Model/ApiV1ParcelsIdLabelGet200Response.md)
+[**\Boxnow\API\ApiV1ParcelsIdLabelGet200Response**](../Model/ApiV1ParcelsIdLabelGet200Response.md)
 
 ### Authorization
 
@@ -264,10 +264,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -330,7 +330,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LabelsApi(
+$apiInstance = new Boxnow\Api\LabelsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

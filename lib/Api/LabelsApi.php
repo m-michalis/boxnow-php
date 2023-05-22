@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Boxnow
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Boxnow\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Boxnow\ApiException;
+use Boxnow\Configuration;
+use Boxnow\HeaderSelector;
+use Boxnow\ObjectSerializer;
 
 /**
  * LabelsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Boxnow
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -145,9 +145,9 @@ class LabelsApi
      * @param  string $order_number Unique order number in Your system. The same you use to create the delivery request. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
      */
     public function apiV1DeliveryRequestsOrderNumberLabelGet($order_number, string $contentType = self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelGet'][0])
     {
@@ -163,9 +163,9 @@ class LabelsApi
      * @param  string $order_number Unique order number in Your system. The same you use to create the delivery request. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1DeliveryRequestsOrderNumberLabelGetWithHttpInfo($order_number, string $contentType = self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelGet'][0])
     {
@@ -208,53 +208,53 @@ class LabelsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response';
+            $returnType = '\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -275,7 +275,7 @@ class LabelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response',
+                        '\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -283,7 +283,7 @@ class LabelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -335,7 +335,7 @@ class LabelsApi
      */
     public function apiV1DeliveryRequestsOrderNumberLabelGetAsyncWithHttpInfo($order_number, string $contentType = self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response';
+        $returnType = '\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response';
         $request = $this->apiV1DeliveryRequestsOrderNumberLabelGetRequest($order_number, $contentType);
 
         return $this->client
@@ -482,9 +482,9 @@ class LabelsApi
      * @param  string $printer_model printer_model (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response
+     * @return \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response
      */
     public function apiV1DeliveryRequestsOrderNumberLabelTypeGet($order_number, $type, $dpi = 200, $width = null, $printer_model = null, string $contentType = self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelTypeGet'][0])
     {
@@ -504,9 +504,9 @@ class LabelsApi
      * @param  string $printer_model (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1DeliveryRequestsOrderNumberLabelTypeGetWithHttpInfo($order_number, $type, $dpi = 200, $width = null, $printer_model = null, string $contentType = self::contentTypes['apiV1DeliveryRequestsOrderNumberLabelTypeGet'][0])
     {
@@ -564,17 +564,17 @@ class LabelsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -609,7 +609,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,12 +850,12 @@ class LabelsApi
      *
      * Find labels as PDF
      *
-     * @param  \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request api_v1_labels_search_post_request (optional)
+     * @param  \Boxnow\API\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request api_v1_labels_search_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1LabelssearchPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response|\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response
+     * @return mixed|\Boxnow\API\ApiV1LabelsSearchPost400Response|\Boxnow\API\ApiV1LabelsSearchPost403Response
      */
     public function apiV1LabelssearchPost($api_v1_labels_search_post_request = null, string $contentType = self::contentTypes['apiV1LabelssearchPost'][0])
     {
@@ -868,12 +868,12 @@ class LabelsApi
      *
      * Find labels as PDF
      *
-     * @param  \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
+     * @param  \Boxnow\API\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1LabelssearchPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response|\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Boxnow\API\ApiV1LabelsSearchPost400Response|\Boxnow\API\ApiV1LabelsSearchPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1LabelssearchPostWithHttpInfo($api_v1_labels_search_post_request = null, string $contentType = self::contentTypes['apiV1LabelssearchPost'][0])
     {
@@ -931,32 +931,32 @@ class LabelsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1LabelsSearchPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1LabelsSearchPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1LabelsSearchPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1LabelsSearchPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1LabelsSearchPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1LabelsSearchPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -991,7 +991,7 @@ class LabelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1LabelsSearchPost400Response',
+                        '\Boxnow\API\ApiV1LabelsSearchPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -999,7 +999,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1LabelsSearchPost403Response',
+                        '\Boxnow\API\ApiV1LabelsSearchPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1014,7 +1014,7 @@ class LabelsApi
      *
      * Find labels as PDF
      *
-     * @param  \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
+     * @param  \Boxnow\API\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1LabelssearchPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1035,7 +1035,7 @@ class LabelsApi
      *
      * Find labels as PDF
      *
-     * @param  \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
+     * @param  \Boxnow\API\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1LabelssearchPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1085,7 +1085,7 @@ class LabelsApi
     /**
      * Create request for operation 'apiV1LabelssearchPost'
      *
-     * @param  \OpenAPI\Client\Model\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
+     * @param  \Boxnow\API\ApiV1LabelsSearchPostRequest $api_v1_labels_search_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1LabelssearchPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1175,9 +1175,9 @@ class LabelsApi
      * @param  string $id Unique parcel ID. You have received parcel ID after a successful delivery request creation or you can list all parcels, see &#x60;/parcels&#x60; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1ParcelsIdLabelGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\API\ApiV1ParcelsIdLabelGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
      */
     public function apiV1ParcelsIdLabelGet($id, string $contentType = self::contentTypes['apiV1ParcelsIdLabelGet'][0])
     {
@@ -1193,9 +1193,9 @@ class LabelsApi
      * @param  string $id Unique parcel ID. You have received parcel ID after a successful delivery request creation or you can list all parcels, see &#x60;/parcels&#x60; (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1ParcelsIdLabelGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\API\ApiV1ParcelsIdLabelGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1ParcelsIdLabelGetWithHttpInfo($id, string $contentType = self::contentTypes['apiV1ParcelsIdLabelGet'][0])
     {
@@ -1238,53 +1238,53 @@ class LabelsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1ParcelsIdLabelGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1ParcelsIdLabelGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1ParcelsIdLabelGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response';
+            $returnType = '\Boxnow\API\ApiV1ParcelsIdLabelGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1305,7 +1305,7 @@ class LabelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response',
+                        '\Boxnow\API\ApiV1ParcelsIdLabelGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1313,7 +1313,7 @@ class LabelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1321,7 +1321,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1365,7 +1365,7 @@ class LabelsApi
      */
     public function apiV1ParcelsIdLabelGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['apiV1ParcelsIdLabelGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiV1ParcelsIdLabelGet200Response';
+        $returnType = '\Boxnow\API\ApiV1ParcelsIdLabelGet200Response';
         $request = $this->apiV1ParcelsIdLabelGetRequest($id, $contentType);
 
         return $this->client
@@ -1512,9 +1512,9 @@ class LabelsApi
      * @param  string $printer_model printer_model (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1ParcelsIdLabelTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response
+     * @return \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response
      */
     public function apiV1ParcelsIdLabelTypeGet($id, $type, $dpi = 200, $width = null, $printer_model = null, string $contentType = self::contentTypes['apiV1ParcelsIdLabelTypeGet'][0])
     {
@@ -1534,9 +1534,9 @@ class LabelsApi
      * @param  string $printer_model (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1ParcelsIdLabelTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1ParcelsIdLabelTypeGetWithHttpInfo($id, $type, $dpi = 200, $width = null, $printer_model = null, string $contentType = self::contentTypes['apiV1ParcelsIdLabelTypeGet'][0])
     {
@@ -1594,17 +1594,17 @@ class LabelsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1639,7 +1639,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1884,9 +1884,9 @@ class LabelsApi
      * @param  string $content_disposition Specify if the downloaded label will be opened or be downloaded. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response
+     * @return \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response
      */
     public function uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet($order_imports_number, $content_disposition = null, string $contentType = self::contentTypes['uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet'][0])
     {
@@ -1903,9 +1903,9 @@ class LabelsApi
      * @param  string $content_disposition Specify if the downloaded label will be opened or be downloaded. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \SplFileObject|\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SplFileObject|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uiV1DeliveryRequestsOrderImportsNumberLabelPdfGetWithHttpInfo($order_imports_number, $content_disposition = null, string $contentType = self::contentTypes['uiV1DeliveryRequestsOrderImportsNumberLabelPdfGet'][0])
     {
@@ -1963,17 +1963,17 @@ class LabelsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2008,7 +2008,7 @@ class LabelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

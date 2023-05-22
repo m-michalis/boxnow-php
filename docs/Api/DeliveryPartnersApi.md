@@ -1,4 +1,4 @@
-# OpenAPI\Client\DeliveryPartnersApi
+# Boxnow\DeliveryPartnersApi
 
 All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DeliveryPartnersGet()`
 
 ```php
-apiV1DeliveryPartnersGet(): \OpenAPI\Client\Model\ApiV1DeliveryPartnersGet200Response
+apiV1DeliveryPartnersGet(): \Boxnow\API\ApiV1DeliveryPartnersGet200Response
 ```
 
 List of available delivery partners
@@ -23,10 +23,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Boxnow\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeliveryPartnersApi(
+$apiInstance = new Boxnow\Api\DeliveryPartnersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiV1DeliveryPartnersGet200Response**](../Model/ApiV1DeliveryPartnersGet200Response.md)
+[**\Boxnow\API\ApiV1DeliveryPartnersGet200Response**](../Model/ApiV1DeliveryPartnersGet200Response.md)
 
 ### Authorization
 

@@ -133,14 +133,14 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DestinationsGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Boxnow\API\ApiV1DestinationsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\Model\ApiV1DestinationsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function apiV1DestinationsGet($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1DestinationsGet'][0])
     {
@@ -156,14 +156,14 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DestinationsGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Boxnow\API\ApiV1DestinationsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\Model\ApiV1DestinationsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1DestinationsGetWithHttpInfo($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1DestinationsGet'][0])
     {
@@ -206,53 +206,53 @@ class LocationsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Boxnow\API\ApiV1DestinationsGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1DestinationsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1DestinationsGet200Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1DestinationsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1DestinationsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1DestinationsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Boxnow\API\ApiV1DestinationsGet200Response';
+            $returnType = '\Boxnow\Model\ApiV1DestinationsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -273,7 +273,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1DestinationsGet200Response',
+                        '\Boxnow\Model\ApiV1DestinationsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -281,7 +281,7 @@ class LocationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -289,7 +289,7 @@ class LocationsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -307,7 +307,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DestinationsGet'] to see the possible values for this operation
@@ -333,7 +333,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DestinationsGet'] to see the possible values for this operation
@@ -343,7 +343,7 @@ class LocationsApi
      */
     public function apiV1DestinationsGetAsyncWithHttpInfo($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1DestinationsGet'][0])
     {
-        $returnType = '\Boxnow\API\ApiV1DestinationsGet200Response';
+        $returnType = '\Boxnow\Model\ApiV1DestinationsGet200Response';
         $request = $this->apiV1DestinationsGetRequest($latlng, $radius, $required_size, $location_type, $name, $region_language_tag, $contentType);
 
         return $this->client
@@ -388,7 +388,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1DestinationsGet'] to see the possible values for this operation
@@ -536,14 +536,14 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1OriginsGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Boxnow\API\ApiV1OriginsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\Model\ApiV1OriginsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function apiV1OriginsGet($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1OriginsGet'][0])
     {
@@ -559,14 +559,14 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1OriginsGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Boxnow\API\ApiV1OriginsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\Model\ApiV1OriginsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1OriginsGetWithHttpInfo($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1OriginsGet'][0])
     {
@@ -609,53 +609,53 @@ class LocationsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Boxnow\API\ApiV1OriginsGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1OriginsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1OriginsGet200Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1OriginsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1OriginsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1OriginsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Boxnow\API\ApiV1OriginsGet200Response';
+            $returnType = '\Boxnow\Model\ApiV1OriginsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -676,7 +676,7 @@ class LocationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1OriginsGet200Response',
+                        '\Boxnow\Model\ApiV1OriginsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -684,7 +684,7 @@ class LocationsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -692,7 +692,7 @@ class LocationsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -710,7 +710,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1OriginsGet'] to see the possible values for this operation
@@ -736,7 +736,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1OriginsGet'] to see the possible values for this operation
@@ -746,7 +746,7 @@ class LocationsApi
      */
     public function apiV1OriginsGetAsyncWithHttpInfo($latlng = null, $radius = 25000, $required_size = null, $location_type = null, $name = null, $region_language_tag = null, string $contentType = self::contentTypes['apiV1OriginsGet'][0])
     {
-        $returnType = '\Boxnow\API\ApiV1OriginsGet200Response';
+        $returnType = '\Boxnow\Model\ApiV1OriginsGet200Response';
         $request = $this->apiV1OriginsGetRequest($latlng, $radius, $required_size, $location_type, $name, $region_language_tag, $contentType);
 
         return $this->client
@@ -791,7 +791,7 @@ class LocationsApi
      * @param  string $latlng If applied only locations in the specified radius from this gps coord are returned (optional)
      * @param  float $radius Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. (optional, default to 25000)
      * @param  float $required_size Return only locations that can accept a package of your &#x60;requiredSize&#x60; (optional)
-     * @param  \Boxnow\API\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
+     * @param  \Boxnow\Model\LocationType[] $location_type Return only locations with given types. If not present, filter is not applied. (optional)
      * @param  string $name Return only locations with matching name (optional)
      * @param  string $region_language_tag (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1OriginsGet'] to see the possible values for this operation

@@ -15,7 +15,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DeliveryRequestsOrderNumberLabelGet()`
 
 ```php
-apiV1DeliveryRequestsOrderNumberLabelGet($order_number): \Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response
+apiV1DeliveryRequestsOrderNumberLabelGet($order_number): \Boxnow\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response
 ```
 
 Get shipping label data of parcels order
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\Boxnow\API\ApiV1DeliveryRequestsOrderNumberLabelGet200Response**](../Model/ApiV1DeliveryRequestsOrderNumberLabelGet200Response.md)
+[**\Boxnow\Model\ApiV1DeliveryRequestsOrderNumberLabelGet200Response**](../Model/ApiV1DeliveryRequestsOrderNumberLabelGet200Response.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ $apiInstance = new Boxnow\Api\LabelsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_labels_search_post_request = new \Boxnow\API\ApiV1LabelsSearchPostRequest(); // \Boxnow\API\ApiV1LabelsSearchPostRequest
+$api_v1_labels_search_post_request = new \Boxnow\Model\ApiV1LabelsSearchPostRequest(); // \Boxnow\Model\ApiV1LabelsSearchPostRequest
 
 try {
     $result = $apiInstance->apiV1LabelssearchPost($api_v1_labels_search_post_request);
@@ -171,7 +171,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_labels_search_post_request** | [**\Boxnow\API\ApiV1LabelsSearchPostRequest**](../Model/ApiV1LabelsSearchPostRequest.md)|  | [optional] |
+| **api_v1_labels_search_post_request** | [**\Boxnow\Model\ApiV1LabelsSearchPostRequest**](../Model/ApiV1LabelsSearchPostRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -193,7 +193,7 @@ No authorization required
 ## `apiV1ParcelsIdLabelGet()`
 
 ```php
-apiV1ParcelsIdLabelGet($id): \Boxnow\API\ApiV1ParcelsIdLabelGet200Response
+apiV1ParcelsIdLabelGet($id): \Boxnow\Model\ApiV1ParcelsIdLabelGet200Response
 ```
 
 Get shipping label data of parcel
@@ -233,7 +233,7 @@ try {
 
 ### Return type
 
-[**\Boxnow\API\ApiV1ParcelsIdLabelGet200Response**](../Model/ApiV1ParcelsIdLabelGet200Response.md)
+[**\Boxnow\Model\ApiV1ParcelsIdLabelGet200Response**](../Model/ApiV1ParcelsIdLabelGet200Response.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Reference number in our system. You should use this when contacting support |
-**state** | [**\Boxnow\API\ParcelState**](ParcelState.md) |  |
+**state** | [**\Boxnow\Model\ParcelState**](ParcelState.md) |  |
 **name** | **string** | Name for the parcel contents | [optional]
 **value** | **string** | Value in default current | [optional]
 **weight** | **string** | Weight in kg | [optional]
@@ -14,12 +14,12 @@ Name | Type | Description | Notes
 **destination_delivery_ref_id** | **string** | Parcel ID in destination delivery partner system | [optional]
 **item_ref_id** | **string** | Parcel reference number in your system | [optional]
 **allow_return** | **bool** | Selected return value of the order | [optional]
-**delivery_request** | [**\Boxnow\API\DeliveryRequest**](DeliveryRequest.md) |  |
-**events** | [**\Boxnow\API\EventsInner[]**](EventsInner.md) |  | [optional]
+**delivery_request** | [**\Boxnow\Model\DeliveryRequest**](DeliveryRequest.md) |  |
+**events** | [**\Boxnow\Model\EventsInner[]**](EventsInner.md) |  | [optional]
 **parcel_label_url** | **string** |  | [optional]
 **order_label_url** | **string** |  | [optional]
 **cancelation_requested** | **bool** | True if you or system administrator had requested parcel cancelation |
-**payment** | [**\Boxnow\API\DeliveryPayment**](DeliveryPayment.md) |  | [optional]
+**payment** | [**\Boxnow\Model\DeliveryPayment**](DeliveryPayment.md) |  | [optional]
 **create_time** | **\DateTime** | ISO8601 Date time format | [optional]
 **update_time** | **\DateTime** | ISO8601 Date time format | [optional]
 

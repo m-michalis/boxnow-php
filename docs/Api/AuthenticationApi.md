@@ -10,7 +10,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1AuthSessionsPost()`
 
 ```php
-apiV1AuthSessionsPost($api_v1_auth_sessions_post_request): \Boxnow\API\ApiV1AuthSessionsPost200Response
+apiV1AuthSessionsPost($api_v1_auth_sessions_post_request): \Boxnow\Model\ApiV1AuthSessionsPost200Response
 ```
 
 Obtain authentication tokens
@@ -28,7 +28,7 @@ $apiInstance = new Boxnow\Api\AuthenticationApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_auth_sessions_post_request = new \Boxnow\API\ApiV1AuthSessionsPostRequest(); // \Boxnow\API\ApiV1AuthSessionsPostRequest
+$api_v1_auth_sessions_post_request = new \Boxnow\Model\ApiV1AuthSessionsPostRequest(); // \Boxnow\Model\ApiV1AuthSessionsPostRequest
 
 try {
     $result = $apiInstance->apiV1AuthSessionsPost($api_v1_auth_sessions_post_request);
@@ -42,11 +42,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_v1_auth_sessions_post_request** | [**\Boxnow\API\ApiV1AuthSessionsPostRequest**](../Model/ApiV1AuthSessionsPostRequest.md)|  | [optional] |
+| **api_v1_auth_sessions_post_request** | [**\Boxnow\Model\ApiV1AuthSessionsPostRequest**](../Model/ApiV1AuthSessionsPostRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\Boxnow\API\ApiV1AuthSessionsPost200Response**](../Model/ApiV1AuthSessionsPost200Response.md)
+[**\Boxnow\Model\ApiV1AuthSessionsPost200Response**](../Model/ApiV1AuthSessionsPost200Response.md)
 
 ### Authorization
 

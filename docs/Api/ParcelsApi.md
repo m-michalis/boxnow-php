@@ -13,7 +13,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1ParcelsGet()`
 
 ```php
-apiV1ParcelsGet($q, $limit, $order_number, $parcel_id, $payment_state, $payment_mode, $state, $created_from, $created_to, $page_token): \Boxnow\API\ApiV1ParcelsGet200Response
+apiV1ParcelsGet($q, $limit, $order_number, $parcel_id, $payment_state, $payment_mode, $state, $created_from, $created_to, $page_token): \Boxnow\Model\ApiV1ParcelsGet200Response
 ```
 
 List parcel info related to your delivery requests
@@ -39,9 +39,9 @@ $q = 'q_example'; // string | Search in: Order ID, Parcel ID, Customer name, Cus
 $limit = 50; // float | Page size
 $order_number = 'order_number_example'; // string | Order number in your system. Return only parcels related to this order number.
 $parcel_id = 'parcel_id_example'; // string | ID of the parcel in our system. Return only parcel/s with this ID.
-$payment_state = new \Boxnow\API\PaymentState(); // PaymentState
-$payment_mode = new \Boxnow\API\PaymentMode(); // PaymentMode
-$state = array(new \Boxnow\API\\Boxnow\API\ParcelState()); // \Boxnow\API\ParcelState[]
+$payment_state = new \Boxnow\Model\PaymentState(); // PaymentState
+$payment_mode = new \Boxnow\Model\PaymentMode(); // PaymentMode
+$state = array(new \Boxnow\Model\\Boxnow\Model\ParcelState()); // \Boxnow\Model\ParcelState[]
 $created_from = 'created_from_example'; // string | UNIX timestamp in milliseconds
 $created_to = 'created_to_example'; // string | UNIX timestamp in milliseconds
 $page_token = 'page_token_example'; // string | Set this token to return records for given page. You get this for each response.
@@ -64,14 +64,14 @@ try {
 | **parcel_id** | **string**| ID of the parcel in our system. Return only parcel/s with this ID. | [optional] |
 | **payment_state** | [**PaymentState**](../Model/.md)|  | [optional] |
 | **payment_mode** | [**PaymentMode**](../Model/.md)|  | [optional] |
-| **state** | [**\Boxnow\API\ParcelState[]**](../Model/\Boxnow\API\ParcelState.md)|  | [optional] |
+| **state** | [**\Boxnow\Model\ParcelState[]**](../Model/\Boxnow\Model\ParcelState.md)|  | [optional] |
 | **created_from** | **string**| UNIX timestamp in milliseconds | [optional] |
 | **created_to** | **string**| UNIX timestamp in milliseconds | [optional] |
 | **page_token** | **string**| Set this token to return records for given page. You get this for each response. | [optional] |
 
 ### Return type
 
-[**\Boxnow\API\ApiV1ParcelsGet200Response**](../Model/ApiV1ParcelsGet200Response.md)
+[**\Boxnow\Model\ApiV1ParcelsGet200Response**](../Model/ApiV1ParcelsGet200Response.md)
 
 ### Authorization
 
@@ -226,9 +226,9 @@ $apiInstance = new Boxnow\Api\ParcelsApi(
 $q = 'q_example'; // string | Search in: Order ID, Parcel ID, Customer name, Customer email, Customer phone number
 $order_number = 'order_number_example'; // string | Order number in your system. Return only parcels related to this order number.
 $parcel_id = 'parcel_id_example'; // string | ID of the parcel in our system. Return only parcel/s with this ID.
-$payment_state = new \Boxnow\API\PaymentState(); // PaymentState
-$payment_mode = new \Boxnow\API\PaymentMode(); // PaymentMode
-$state = array(new \Boxnow\API\\Boxnow\API\ParcelState()); // \Boxnow\API\ParcelState[]
+$payment_state = new \Boxnow\Model\PaymentState(); // PaymentState
+$payment_mode = new \Boxnow\Model\PaymentMode(); // PaymentMode
+$state = array(new \Boxnow\Model\\Boxnow\Model\ParcelState()); // \Boxnow\Model\ParcelState[]
 $created_from = 'created_from_example'; // string | UNIX timestamp in milliseconds
 $created_to = 'created_to_example'; // string | UNIX timestamp in milliseconds
 
@@ -249,7 +249,7 @@ try {
 | **parcel_id** | **string**| ID of the parcel in our system. Return only parcel/s with this ID. | [optional] |
 | **payment_state** | [**PaymentState**](../Model/.md)|  | [optional] |
 | **payment_mode** | [**PaymentMode**](../Model/.md)|  | [optional] |
-| **state** | [**\Boxnow\API\ParcelState[]**](../Model/\Boxnow\API\ParcelState.md)|  | [optional] |
+| **state** | [**\Boxnow\Model\ParcelState[]**](../Model/\Boxnow\Model\ParcelState.md)|  | [optional] |
 | **created_from** | **string**| UNIX timestamp in milliseconds | [optional] |
 | **created_to** | **string**| UNIX timestamp in milliseconds | [optional] |
 

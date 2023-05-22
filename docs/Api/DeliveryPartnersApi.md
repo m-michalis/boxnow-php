@@ -10,7 +10,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DeliveryPartnersGet()`
 
 ```php
-apiV1DeliveryPartnersGet(): \Boxnow\API\ApiV1DeliveryPartnersGet200Response
+apiV1DeliveryPartnersGet(): \Boxnow\Model\ApiV1DeliveryPartnersGet200Response
 ```
 
 List of available delivery partners
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Boxnow\API\ApiV1DeliveryPartnersGet200Response**](../Model/ApiV1DeliveryPartnersGet200Response.md)
+[**\Boxnow\Model\ApiV1DeliveryPartnersGet200Response**](../Model/ApiV1DeliveryPartnersGet200Response.md)
 
 ### Authorization
 

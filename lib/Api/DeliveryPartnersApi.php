@@ -131,7 +131,7 @@ class DeliveryPartnersApi
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Boxnow\API\ApiV1DeliveryPartnersGet200Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\Model\ApiV1DeliveryPartnersGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function apiV1DeliveryPartnersGet(string $contentType = self::contentTypes['apiV1DeliveryPartnersGet'][0])
     {
@@ -148,7 +148,7 @@ class DeliveryPartnersApi
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Boxnow\API\ApiV1DeliveryPartnersGet200Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\Model\ApiV1DeliveryPartnersGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1DeliveryPartnersGetWithHttpInfo(string $contentType = self::contentTypes['apiV1DeliveryPartnersGet'][0])
     {
@@ -191,38 +191,38 @@ class DeliveryPartnersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Boxnow\API\ApiV1DeliveryPartnersGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1DeliveryPartnersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1DeliveryPartnersGet200Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1DeliveryPartnersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1DeliveryPartnersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1DeliveryPartnersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Boxnow\API\ApiV1DeliveryPartnersGet200Response';
+            $returnType = '\Boxnow\Model\ApiV1DeliveryPartnersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class DeliveryPartnersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1DeliveryPartnersGet200Response',
+                        '\Boxnow\Model\ApiV1DeliveryPartnersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -251,7 +251,7 @@ class DeliveryPartnersApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class DeliveryPartnersApi
      */
     public function apiV1DeliveryPartnersGetAsyncWithHttpInfo(string $contentType = self::contentTypes['apiV1DeliveryPartnersGet'][0])
     {
-        $returnType = '\Boxnow\API\ApiV1DeliveryPartnersGet200Response';
+        $returnType = '\Boxnow\Model\ApiV1DeliveryPartnersGet200Response';
         $request = $this->apiV1DeliveryPartnersGetRequest($contentType);
 
         return $this->client

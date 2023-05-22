@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mode** | [**\Boxnow\API\PaymentMode**](PaymentMode.md) |  |
-**price** | [**\Boxnow\API\Money**](Money.md) |  |
-**state** | [**\Boxnow\API\PaymentState**](PaymentState.md) |  |
+**mode** | [**\Boxnow\Model\PaymentMode**](PaymentMode.md) |  |
+**price** | [**\Boxnow\Model\Money**](Money.md) |  |
+**state** | [**\Boxnow\Model\PaymentState**](PaymentState.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

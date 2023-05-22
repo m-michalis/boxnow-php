@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Boxnow\API\ParcelLabelData[]**](ParcelLabelData.md) |  | [optional]
+**data** | [**\Boxnow\Model\ParcelLabelData[]**](ParcelLabelData.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

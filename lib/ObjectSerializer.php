@@ -29,7 +29,7 @@
 namespace Boxnow;
 
 use GuzzleHttp\Psr7\Utils;
-use Boxnow\API\ModelInterface;
+use Boxnow\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment

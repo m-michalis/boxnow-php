@@ -142,7 +142,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state payment_state (optional)
      * @param  PaymentMode $payment_mode payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $page_token Set this token to return records for given page. You get this for each response. (optional)
@@ -150,7 +150,7 @@ class ParcelsApi
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Boxnow\API\ApiV1ParcelsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\Model\ApiV1ParcelsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function apiV1ParcelsGet($q = null, $limit = 50, $order_number = null, $parcel_id = null, $payment_state = null, $payment_mode = null, $state = null, $created_from = null, $created_to = null, $page_token = null, string $contentType = self::contentTypes['apiV1ParcelsGet'][0])
     {
@@ -169,7 +169,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $page_token Set this token to return records for given page. You get this for each response. (optional)
@@ -177,7 +177,7 @@ class ParcelsApi
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Boxnow\API\ApiV1ParcelsGet200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\Model\ApiV1ParcelsGet200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1ParcelsGetWithHttpInfo($q = null, $limit = 50, $order_number = null, $parcel_id = null, $payment_state = null, $payment_mode = null, $state = null, $created_from = null, $created_to = null, $page_token = null, string $contentType = self::contentTypes['apiV1ParcelsGet'][0])
     {
@@ -220,53 +220,53 @@ class ParcelsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Boxnow\API\ApiV1ParcelsGet200Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1ParcelsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1ParcelsGet200Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1ParcelsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1ParcelsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1ParcelsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Boxnow\API\ApiV1ParcelsGet200Response';
+            $returnType = '\Boxnow\Model\ApiV1ParcelsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class ParcelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1ParcelsGet200Response',
+                        '\Boxnow\Model\ApiV1ParcelsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class ParcelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -303,7 +303,7 @@ class ParcelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -324,7 +324,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $page_token Set this token to return records for given page. You get this for each response. (optional)
@@ -354,7 +354,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $page_token Set this token to return records for given page. You get this for each response. (optional)
@@ -365,7 +365,7 @@ class ParcelsApi
      */
     public function apiV1ParcelsGetAsyncWithHttpInfo($q = null, $limit = 50, $order_number = null, $parcel_id = null, $payment_state = null, $payment_mode = null, $state = null, $created_from = null, $created_to = null, $page_token = null, string $contentType = self::contentTypes['apiV1ParcelsGet'][0])
     {
-        $returnType = '\Boxnow\API\ApiV1ParcelsGet200Response';
+        $returnType = '\Boxnow\Model\ApiV1ParcelsGet200Response';
         $request = $this->apiV1ParcelsGetRequest($q, $limit, $order_number, $parcel_id, $payment_state, $payment_mode, $state, $created_from, $created_to, $page_token, $contentType);
 
         return $this->client
@@ -413,7 +413,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $page_token Set this token to return records for given page. You get this for each response. (optional)
@@ -669,7 +669,7 @@ class ParcelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class ParcelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1ParcelsIdConfirmAnyapmDeliveryPost400Response',
+                        '\Boxnow\Model\ApiV1ParcelsIdConfirmAnyapmDeliveryPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -918,7 +918,7 @@ class ParcelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -926,7 +926,7 @@ class ParcelsApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1ParcelsIdConfirmAnyapmDeliveryPost503Response',
+                        '\Boxnow\Model\ApiV1ParcelsIdConfirmAnyapmDeliveryPost503Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1102,14 +1102,14 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state payment_state (optional)
      * @param  PaymentMode $payment_mode payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1ParcelsCsvGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return string|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return string|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function uiV1ParcelsCsvGet($q = null, $order_number = null, $parcel_id = null, $payment_state = null, $payment_mode = null, $state = null, $created_from = null, $created_to = null, string $contentType = self::contentTypes['uiV1ParcelsCsvGet'][0])
     {
@@ -1127,14 +1127,14 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1ParcelsCsvGet'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of string|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of string|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uiV1ParcelsCsvGetWithHttpInfo($q = null, $order_number = null, $parcel_id = null, $payment_state = null, $payment_mode = null, $state = null, $created_from = null, $created_to = null, string $contentType = self::contentTypes['uiV1ParcelsCsvGet'][0])
     {
@@ -1192,32 +1192,32 @@ class ParcelsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1252,7 +1252,7 @@ class ParcelsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1260,7 +1260,7 @@ class ParcelsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1280,7 +1280,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1ParcelsCsvGet'] to see the possible values for this operation
@@ -1308,7 +1308,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1ParcelsCsvGet'] to see the possible values for this operation
@@ -1365,7 +1365,7 @@ class ParcelsApi
      * @param  string $parcel_id ID of the parcel in our system. Return only parcel/s with this ID. (optional)
      * @param  PaymentState $payment_state (optional)
      * @param  PaymentMode $payment_mode (optional)
-     * @param  \Boxnow\API\ParcelState[] $state (optional)
+     * @param  \Boxnow\Model\ParcelState[] $state (optional)
      * @param  string $created_from UNIX timestamp in milliseconds (optional)
      * @param  string $created_to UNIX timestamp in milliseconds (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uiV1ParcelsCsvGet'] to see the possible values for this operation

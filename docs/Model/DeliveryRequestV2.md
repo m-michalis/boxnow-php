@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **amount_to_be_collected** | **string** | COD amount for COD payment mode. Must only contain numbers with no more than one decimal point and exactly 2 decimal places. |
 **allow_return** | **bool** | If true, client will be able to return the goods the same way he received it. | [default to false]
 **notify_on_accepted** | **string** | If set, we send a notification to this email when we accepted the order to our system. |
-**origin** | [**\Boxnow\API\DeliveryRequestV2Origin**](DeliveryRequestV2Origin.md) |  |
-**destination** | [**\Boxnow\API\DeliveryRequestV2Destination**](DeliveryRequestV2Destination.md) |  |
-**parcels** | [**\Boxnow\API\DeliveryRequestV2ParcelsInner[]**](DeliveryRequestV2ParcelsInner.md) | List of parcels you want to send via BoxNow. |
+**origin** | [**\Boxnow\Model\DeliveryRequestV2Origin**](DeliveryRequestV2Origin.md) |  |
+**destination** | [**\Boxnow\Model\DeliveryRequestV2Destination**](DeliveryRequestV2Destination.md) |  |
+**parcels** | [**\Boxnow\Model\DeliveryRequestV2ParcelsInner[]**](DeliveryRequestV2ParcelsInner.md) | List of parcels you want to send via BoxNow. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

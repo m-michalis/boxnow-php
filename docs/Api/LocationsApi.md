@@ -11,7 +11,7 @@ All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operati
 ## `apiV1DestinationsGet()`
 
 ```php
-apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag): \Boxnow\API\ApiV1DestinationsGet200Response
+apiV1DestinationsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag): \Boxnow\Model\ApiV1DestinationsGet200Response
 ```
 
 List available destinations to deliver the order to
@@ -36,7 +36,7 @@ $apiInstance = new Boxnow\Api\LocationsApi(
 $latlng = 48.78081955454138,12.446962472273063; // string | If applied only locations in the specified radius from this gps coord are returned
 $radius = 1000; // float | Radius in meters to return only locations within selected radius from given GPS location. Ignored if `latlng` is not present.
 $required_size = 1; // float | Return only locations that can accept a package of your `requiredSize`
-$location_type = array(new \Boxnow\API\\Boxnow\API\LocationType()); // \Boxnow\API\LocationType[] | Return only locations with given types. If not present, filter is not applied.
+$location_type = array(new \Boxnow\Model\\Boxnow\Model\LocationType()); // \Boxnow\Model\LocationType[] | Return only locations with given types. If not present, filter is not applied.
 $name = ΠΑΝΤΕΛΟΓΛΟΥ ΔΗΜΗΤΡΗΣ; // string | Return only locations with matching name
 $region_language_tag = 'region_language_tag_example'; // string
 
@@ -55,13 +55,13 @@ try {
 | **latlng** | **string**| If applied only locations in the specified radius from this gps coord are returned | [optional] |
 | **radius** | **float**| Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. | [optional] [default to 25000] |
 | **required_size** | **float**| Return only locations that can accept a package of your &#x60;requiredSize&#x60; | [optional] |
-| **location_type** | [**\Boxnow\API\LocationType[]**](../Model/\Boxnow\API\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional] |
+| **location_type** | [**\Boxnow\Model\LocationType[]**](../Model/\Boxnow\Model\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional] |
 | **name** | **string**| Return only locations with matching name | [optional] |
 | **region_language_tag** | **string**|  | [optional] |
 
 ### Return type
 
-[**\Boxnow\API\ApiV1DestinationsGet200Response**](../Model/ApiV1DestinationsGet200Response.md)
+[**\Boxnow\Model\ApiV1DestinationsGet200Response**](../Model/ApiV1DestinationsGet200Response.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `apiV1OriginsGet()`
 
 ```php
-apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag): \Boxnow\API\ApiV1OriginsGet200Response
+apiV1OriginsGet($latlng, $radius, $required_size, $location_type, $name, $region_language_tag): \Boxnow\Model\ApiV1OriginsGet200Response
 ```
 
 List available origins to pickup the order from
@@ -104,7 +104,7 @@ $apiInstance = new Boxnow\Api\LocationsApi(
 $latlng = 48.78081955454138,12.446962472273063; // string | If applied only locations in the specified radius from this gps coord are returned
 $radius = 1000; // float | Radius in meters to return only locations within selected radius from given GPS location. Ignored if `latlng` is not present.
 $required_size = 1; // float | Return only locations that can accept a package of your `requiredSize`
-$location_type = array(new \Boxnow\API\\Boxnow\API\LocationType()); // \Boxnow\API\LocationType[] | Return only locations with given types. If not present, filter is not applied.
+$location_type = array(new \Boxnow\Model\\Boxnow\Model\LocationType()); // \Boxnow\Model\LocationType[] | Return only locations with given types. If not present, filter is not applied.
 $name = ΠΑΝΤΕΛΟΓΛΟΥ ΔΗΜΗΤΡΗΣ; // string | Return only locations with matching name
 $region_language_tag = 'region_language_tag_example'; // string
 
@@ -123,13 +123,13 @@ try {
 | **latlng** | **string**| If applied only locations in the specified radius from this gps coord are returned | [optional] |
 | **radius** | **float**| Radius in meters to return only locations within selected radius from given GPS location. Ignored if &#x60;latlng&#x60; is not present. | [optional] [default to 25000] |
 | **required_size** | **float**| Return only locations that can accept a package of your &#x60;requiredSize&#x60; | [optional] |
-| **location_type** | [**\Boxnow\API\LocationType[]**](../Model/\Boxnow\API\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional] |
+| **location_type** | [**\Boxnow\Model\LocationType[]**](../Model/\Boxnow\Model\LocationType.md)| Return only locations with given types. If not present, filter is not applied. | [optional] |
 | **name** | **string**| Return only locations with matching name | [optional] |
 | **region_language_tag** | **string**|  | [optional] |
 
 ### Return type
 
-[**\Boxnow\API\ApiV1OriginsGet200Response**](../Model/ApiV1OriginsGet200Response.md)
+[**\Boxnow\Model\ApiV1OriginsGet200Response**](../Model/ApiV1OriginsGet200Response.md)
 
 ### Authorization
 

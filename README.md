@@ -219,7 +219,7 @@ $apiInstance = new Boxnow\Api\AuthenticationApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$api_v1_auth_sessions_post_request = new \Boxnow\API\ApiV1AuthSessionsPostRequest(); // \Boxnow\API\ApiV1AuthSessionsPostRequest
+$api_v1_auth_sessions_post_request = new \Boxnow\Model\ApiV1AuthSessionsPostRequest(); // \Boxnow\Model\ApiV1AuthSessionsPostRequest
 
 try {
     $result = $apiInstance->apiV1AuthSessionsPost($api_v1_auth_sessions_post_request);

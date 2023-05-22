@@ -127,12 +127,12 @@ class AuthenticationApi
      *
      * Obtain authentication tokens
      *
-     * @param  \Boxnow\API\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request api_v1_auth_sessions_post_request (optional)
+     * @param  \Boxnow\Model\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request api_v1_auth_sessions_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1AuthSessionsPost'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Boxnow\API\ApiV1AuthSessionsPost200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response
+     * @return \Boxnow\Model\ApiV1AuthSessionsPost200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response
      */
     public function apiV1AuthSessionsPost($api_v1_auth_sessions_post_request = null, string $contentType = self::contentTypes['apiV1AuthSessionsPost'][0])
     {
@@ -145,12 +145,12 @@ class AuthenticationApi
      *
      * Obtain authentication tokens
      *
-     * @param  \Boxnow\API\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
+     * @param  \Boxnow\Model\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1AuthSessionsPost'] to see the possible values for this operation
      *
      * @throws \Boxnow\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Boxnow\API\ApiV1AuthSessionsPost200Response|\Boxnow\API\ApiV1AuthSessionsPost400Response|\Boxnow\API\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Boxnow\Model\ApiV1AuthSessionsPost200Response|\Boxnow\Model\ApiV1AuthSessionsPost400Response|\Boxnow\Model\ApiV1AuthSessionsPost403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV1AuthSessionsPostWithHttpInfo($api_v1_auth_sessions_post_request = null, string $contentType = self::contentTypes['apiV1AuthSessionsPost'][0])
     {
@@ -193,53 +193,53 @@ class AuthenticationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost200Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost200Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost200Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost400Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost400Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost400Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost400Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
+                    if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Boxnow\API\ApiV1AuthSessionsPost403Response' !== 'string') {
+                        if ('\Boxnow\Model\ApiV1AuthSessionsPost403Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Boxnow\API\ApiV1AuthSessionsPost403Response', []),
+                        ObjectSerializer::deserialize($content, '\Boxnow\Model\ApiV1AuthSessionsPost403Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Boxnow\API\ApiV1AuthSessionsPost200Response';
+            $returnType = '\Boxnow\Model\ApiV1AuthSessionsPost200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -260,7 +260,7 @@ class AuthenticationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost200Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -268,7 +268,7 @@ class AuthenticationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost400Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost400Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -276,7 +276,7 @@ class AuthenticationApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Boxnow\API\ApiV1AuthSessionsPost403Response',
+                        '\Boxnow\Model\ApiV1AuthSessionsPost403Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class AuthenticationApi
      *
      * Obtain authentication tokens
      *
-     * @param  \Boxnow\API\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
+     * @param  \Boxnow\Model\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1AuthSessionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -312,7 +312,7 @@ class AuthenticationApi
      *
      * Obtain authentication tokens
      *
-     * @param  \Boxnow\API\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
+     * @param  \Boxnow\Model\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1AuthSessionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -320,7 +320,7 @@ class AuthenticationApi
      */
     public function apiV1AuthSessionsPostAsyncWithHttpInfo($api_v1_auth_sessions_post_request = null, string $contentType = self::contentTypes['apiV1AuthSessionsPost'][0])
     {
-        $returnType = '\Boxnow\API\ApiV1AuthSessionsPost200Response';
+        $returnType = '\Boxnow\Model\ApiV1AuthSessionsPost200Response';
         $request = $this->apiV1AuthSessionsPostRequest($api_v1_auth_sessions_post_request, $contentType);
 
         return $this->client
@@ -362,7 +362,7 @@ class AuthenticationApi
     /**
      * Create request for operation 'apiV1AuthSessionsPost'
      *
-     * @param  \Boxnow\API\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
+     * @param  \Boxnow\Model\ApiV1AuthSessionsPostRequest $api_v1_auth_sessions_post_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiV1AuthSessionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

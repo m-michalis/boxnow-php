@@ -67,7 +67,7 @@ class WebhookMessageData implements ModelInterface, ArrayAccess, \JsonSerializab
         'event_location' => '\Boxnow\Model\WebhookMessageDataEventLocation',
         'additional_information' => 'string',
         'customer' => '\Boxnow\Model\WebhookMessageDataCustomer',
-        'time' => 'MixedDateTime'
+        'time' => 'DateTime'
     ];
 
     /**

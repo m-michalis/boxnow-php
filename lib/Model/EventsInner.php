@@ -61,7 +61,7 @@ class EventsInner implements ModelInterface, ArrayAccess, \JsonSerializable
         'location_display_name' => 'string',
         'location_id' => 'string',
         'postal_code' => 'string',
-        'create_time' => '\DateTimeMixed'
+        'create_time' => '\DateTime'
     ];
 
     /**

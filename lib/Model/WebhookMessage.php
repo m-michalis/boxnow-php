@@ -63,7 +63,7 @@ class WebhookMessage implements ModelInterface, ArrayAccess, \JsonSerializable
         'source' => 'string',
         'subject' => 'string',
         'id' => 'string',
-        'time' => '\DateTimeMixed',
+        'time' => '\DateTime',
         'datacontenttype' => 'string',
         'datasignature' => 'string',
         'data' => '\Boxnow\Model\WebhookMessageData'

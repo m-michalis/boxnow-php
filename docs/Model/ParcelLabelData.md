@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **recipient** | [**\Boxnow\Model\ParcelLabelDataRecipient**](ParcelLabelDataRecipient.md) |  |
 **delivery** | [**\Boxnow\Model\ParcelLabelDataDelivery**](ParcelLabelDataDelivery.md) |  |
 **payment** | [**\Boxnow\Model\ParcelLabelDataPayment**](ParcelLabelDataPayment.md) |  |
-**create_time** | **string** | Date time in &#x60;en-GB&#x60; 24h format, e.g. &#x60;Mon 25/07/22 16:14&#x60; | [optional]
+**create_time** | **string** | Date time in 24h format based on region, e.g. &#x60;Τετ 21/12/22 16:37&#x60; for &#x60;el-GR&#x60; region. | [optional]
 **order_number** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

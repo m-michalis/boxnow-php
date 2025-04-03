@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**delivery_partner_id** | **int** | Use if want to deliver the parcels via another delivery service. ID of Delivery partner, see &#x60;/delivery-partners&#x60; | [optional]
 **contact_number** | **string** | Phone number |
 **contact_email** | **string** | E-mail address |
 **contact_name** | **string** | Name, e.g. person or company name |
-**delivery_partner_id** | **string** | Use if want to deliver the parcels via another delivery service. ID of Delivery partner, see &#x60;/delivery-partners&#x60; | [optional]
 **title** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 **address_line1** | **string** |  |

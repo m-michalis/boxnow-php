@@ -12,8 +12,10 @@ Name | Type | Description | Notes
 **payment_mode** | [**\Boxnow\Model\PaymentMode**](PaymentMode.md) |  |
 **amount_to_be_collected** | **string** | COD amount for COD payment mode. Must only contain numbers with no more than one decimal point and exactly 2 decimal places. |
 **allow_return** | **bool** | If true, client will be able to return the goods the same way he received it. | [optional] [default to false]
+**show_recipient_information** | **bool** | If true, recipient phone number and email will be printed on the label. | [optional]
 **notify_on_accepted** | **string** | If set, we send a notification to this email when we accepted the order to our system. | [optional]
 **notify_smson_accepted** | **string** | Phone number in international format. If set, we send a sms notification to this phone number. | [optional]
+**additional_information** | **string** | Additional delivery request information. This is later send through the webhook | [optional]
 **return_location** | [**\Boxnow\Model\DeliveryRequestReturnLocation**](DeliveryRequestReturnLocation.md) |  | [optional]
 **origin** | [**\Boxnow\Model\DeliveryRequestOrigin**](DeliveryRequestOrigin.md) |  |
 **destination** | [**\Boxnow\Model\DeliveryRequestDestination**](DeliveryRequestDestination.md) |  |

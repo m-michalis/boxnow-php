@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Item reference number in Your system | [optional]
-**name** | **string** | Order item name | [optional]
+**name** | **string** | Order item name (maximum 1000 characters) | [optional]
 **value** | **string** | Item value. Must only contain numbers with no more than one decimal point and exactly 2 decimal places. |
 **weight** | **float** | Item weight in kg | [optional]
 **compartment_size** | **float** | Compartment size required for the package. Required only for &#x60;apm&#x60;/&#x60;any-apm&#x60; origin. | [optional]

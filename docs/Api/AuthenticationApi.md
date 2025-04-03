@@ -1,6 +1,6 @@
 # Boxnow\AuthenticationApi
 
-All URIs are relative to https://boxnow.gr/media/yaml/TBA, except if the operation defines another base path.
+All URIs are relative to http://TBA, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
